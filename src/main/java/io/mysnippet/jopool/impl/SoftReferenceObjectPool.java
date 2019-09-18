@@ -12,11 +12,15 @@ public class SoftReferenceObjectPool<T> extends BaseObjectPool<T> {
     }
 
     @Override
-    public T borrowObject() {
+    public synchronized T borrowObject() {
         assertOpen();
         T obj = null;
         boolean newlyCreated = false;
         SoftReferencePooledObject<T> softRef = null;
+
+        for (; obj == null; ) {
+
+        }
 
 
         return null;
