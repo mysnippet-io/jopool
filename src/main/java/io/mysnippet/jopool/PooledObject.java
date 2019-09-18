@@ -4,6 +4,11 @@ import io.mysnippet.jopool.assist.PooledObjectState;
 
 import java.io.PrintWriter;
 
+/**
+ * 池化对象
+ *
+ * @param <T>
+ */
 public interface PooledObject<T> extends Comparable<PooledObject<T>> {
 
   T getObject();

@@ -5,6 +5,11 @@ import io.mysnippet.jopool.assist.PooledObjectState;
 
 import java.io.PrintWriter;
 
+/**
+ * 默认池化对象实现
+ *
+ * @param <T>
+ */
 public class DefaultPooledObject<T> implements PooledObject<T> {
 
   private final T object;
