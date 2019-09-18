@@ -1,8 +1,8 @@
 package io.mysnippet.jopool;
 
-import io.mysnippet.jopool.assist.Object;
+import io.mysnippet.jopool.assist.BaseObject;
 
-public abstract class BaseObjectPool<T> extends Object implements ObjectPool<T> {
+public abstract class BaseObjectPool<T> extends BaseObject implements ObjectPool<T> {
 
   private volatile boolean closed = false;
 

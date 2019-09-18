@@ -1,6 +1,6 @@
 package io.mysnippet.jopool.assist;
 
-public abstract class Object {
+public abstract class BaseObject {
 
   @Override
   public String toString() {
