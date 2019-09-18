@@ -75,18 +75,11 @@ class LinkedBlockingDeque<E> extends AbstractQueue<E> implements Deque<E>, Seria
   private static final long serialVersionUID = -387911632671998426L;
 
   /**
-   * Doubly-linked list node class.
+   * Doubly-linked list node class. 双向链表
    *
    * @param <E> node item type
    */
   private static final class Node<E> {
-
-//    X，当前节点
-//    P，前置节点
-//    N，后置节点
-//
-//    前置节点是当前节点，表明当前节点是尾节点；
-//    后置节点是当前节点，表明当前节点是头节点；
 
     /** The item, or null if this node has been removed. */
     E item;
@@ -94,7 +87,7 @@ class LinkedBlockingDeque<E> extends AbstractQueue<E> implements Deque<E>, Seria
     /**
      * One of:
      * - the real predecessor(前置) Node
-     * - this Node, meaning the predecessor is tail
+     * - this Node, meaning the predecessor is tail(尾)
      * - null, meaning there is no predecessor
      */
     Node<E> prev;
@@ -102,7 +95,7 @@ class LinkedBlockingDeque<E> extends AbstractQueue<E> implements Deque<E>, Seria
     /**
      * One of:
      * - the real successor(后置) Node
-     * - this Node, meaning the successor is head
+     * - this Node, meaning the successor is head(头)
      * - null, meaning there is no successor
      */
     Node<E> next;
@@ -221,6 +214,8 @@ class LinkedBlockingDeque<E> extends AbstractQueue<E> implements Deque<E>, Seria
 
   /**
    * Links provided element as first element, or returns false if full.
+   *
+   * 将提供的元素链接为第一个元素，如果已满则返回false。
    *
    * @param e The element to link as the first element.
    * @return {@code true} if successful, otherwise {@code false}
