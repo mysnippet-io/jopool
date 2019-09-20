@@ -115,21 +115,23 @@ class LinkedBlockingDeque<E> extends AbstractQueue<E> implements Deque<E>, Seria
   }
 
   /**
-   * Pointer to first node. Invariant: (first == null && last == null) || (first.prev == null &&
-   * first.item != null)
+   * Pointer to first node.
+   *
+   * Invariant: (first == null && last == null) || (first.prev == null && first.item != null)
    */
   private transient Node<E> first; // @GuardedBy("lock")
 
   /**
-   * Pointer to last node. Invariant: (first == null && last == null) || (last.next == null &&
-   * last.item != null)
+   * Pointer to last node.
+   *
+   * Invariant: (first == null && last == null) || (last.next == null && last.item != null)
    */
   private transient Node<E> last; // @GuardedBy("lock")
 
-  /** Number of items in the deque, 双端队列总数 */
+  /** Number of items in the deque, 双端队列元素总数 */
   private transient int count; // @GuardedBy("lock")
 
-  /** Maximum number of items in the deque */
+  /** Maximum number of items in the deque，双端队列容量*/
   private final int capacity;
 
   /** Main lock guarding all access */
